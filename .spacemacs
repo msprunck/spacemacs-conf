@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -52,7 +53,12 @@ values."
      syntax-checking
      themes-megapack
      version-control
-     )
+     go
+     elm
+     (wakatime :variables
+               ;; use the actual wakatime path
+               wakatime-cli-path "/usr/local/bin/wakatime"
+               wakatime-python-path "/usr/local/bin/python"))
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
